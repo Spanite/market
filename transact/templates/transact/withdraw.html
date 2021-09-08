@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+
+{% block title %}withdraw{% endblock title %}
+
+{% block content %}
+
+<div class="max-w-sm mx-auto">
+    <h1 class="text-gray-800 text-lg font-bold uppercase">withdrawal request</h1>
+    <div class="py-2 border-t border-gray-200">
+        <h1 class="text-4xl text-gray-800"></h1>
+    </div>
+    <form method="post" class="mt-2">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type='submit'   onclick="toggleModal('modal-example-small')" class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">
+            Submit
+        </button>
+        
+    </form>
+</div>
+
+{% endblock content %}
+

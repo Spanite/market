@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}processing{% endblock title %}
+
+{% block content %}
+<div class="text-center justify-center tracking-wider object-center uppercase max-w-7xl mx-auto m-24">
+<div class="justify-center object-center">
+<img class="inline object-center" src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-emoji-emoji-justicon-lineal-color-justicon-2.png"/>
+<h1 class="text-black font-bold sm:text-3xl text-xl mt-8 "> Welcome to s-financialmarkets</h1>
+</div>
+
+<p class="capitalize text-black font-bold sm:text-2xl text-lg mt-8"> processing your dashboard this will take a few minutes</p>
+<p class="text-black font-bold sm:text-xl text-base mt-8"> Best in CFDs</p>
+
+        <a href="{% url 'main:index' %}" type='submit' class="w-1/2 mt-6 text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">
+            go to dashboard
+        </a>
+
+    <div class="py-5 border-t border-gray-200 mt-2">
+        <a class="hover:text-blue-500 font-bold text-base" href="{% url 'login' %}">go back to login?</a>
+    </div>
+
+
+</div>
+{% endblock content %}

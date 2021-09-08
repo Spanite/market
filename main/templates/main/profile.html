@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tailwind_filters %}
+{% load l10n %}
+
+{% block title %}profile{% endblock title %}
+
+{% block content %}
+
+<div class="max-w-sm mx-auto mt-8">
+    <h1 class="text-2xl text-gray-800 capitalize mb-4">please complete your registration</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{profile|crispy}}
+    <a href="{% url 'login' %}" type='submit' class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md text-center">
+            submit
+    </a>
+</form>
+</div>
+
+{% endblock content %}

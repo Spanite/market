@@ -1,0 +1,583 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock title %}
+
+{% block content %}
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "ETH/USD"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+      
+<div  class="w-full relative">
+        <div class="absolute inset-0 bg-gray-100 bg-opacity-30">
+            <div class="flex flex-col absolute top-0 left-0 w-full h-full items-center justify-center relative  ">                       
+                    <div class="sm:text-4xl text-2xl text-gray-800 text-center justify-center tracking-wider object-center uppercase ">steering you towards new opportunities is our great mission</div>
+                        <div class="font-light text-2xl italic text-black pb-8 capitalize">best in CFDs</div>
+                        <div class="font-light text-2xl italic text-black pb-8 capitalize">Easy to start-register-deposit-start earning</div>
+                            <div class="flex justify-center">
+                        <a href="{% url 'login' %}" class="inline-flex text-gray bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg capitalize">start trading</a>
+                            </div>                                 
+            </div>
+        </div>       
+            <img src="{% static 'img/forex-19.jpg' %}">
+    </div>
+</div>
+
+<section class="text-white body-font bg-gray-900">
+  <div class="container px-5 py-4 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/3 w-1/2">
+        <h2 class="title-font font-medium sm:text-2xl text-xl capitalize">regulations</h2>
+        <p class="leading-relaxed">Licensed & Regulated by CySEC under licence number 317/17</p>
+      </div>
+      <div class="p-4 sm:w-1/3 w-1/2">
+        <h2 class="title-font font-medium sm:text-2xl text-xl  capitalize">easy to earn</h2>
+        <p class="leading-relaxed">algorithmic trading&shadow trading</p>
+      </div>
+      <div class="p-4 sm:w-1/3 w-full">
+        <h2 class="title-font font-medium sm:text-2xl text-xl capitalize">safe&secure</h2>
+        <p class="leading-relaxed">Secure payments solutions with multiple payment methods</p>
+      </div>
+  
+    </div>
+  </div>
+</section>
+
+
+  <div class="container px-5 py-8 mx-auto">
+    <h3 class="font-light text-2xl italic text-black pb-8 capitalize text-center justify-center">as featured in:</h3>
+
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/4 w-1/2">
+      <img src="{% static 'img/buzz.png' %}">
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+      <img src="{% static 'img/cnbc.png' %}">
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+      <img src="{% static 'img/trad.png' %}">
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+      <img src="{% static 'img/mw.png' %}">
+        
+      </div>
+    </div>
+  </div>
+
+
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">PLACE YOUR MONEY 
+        <br class="hidden lg:inline-block">ON THE BEST INVESTMENTS
+      </h1>
+      <p class="mb-8 leading-relaxed">When you leave your money in the bank, it diminishes gradually with the current exchange rate. Let's help your money grow by putting it to work.
+Gone are those days you need to be an expert with years of experience, have millions of Pounds or stay fully committed to begin making profits trading. Financial Trading and Investing are risky fields that require proven experience and expertise for players to mitigate the downsides. Our team of traders
+ and investors ensure not only that your funds are at work, but are put in carefully planned investments and trades.</p>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="{% static 'img/forex-17.jpg' %}">
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-600 body-font">
+	<div class="container px-5 py-24 mx-auto">
+		<div class="flex flex-wrap -m-4">
+			<div class="p-4 md:w-1/4">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{% static 'img/fx10.png' %}" alt="blog">
+					<div class="p-6">
+						<h1 class="title-font text-lg font-medium text-gray-900 mb-3 uppercase">analysist news</h1>
+						<p class="leading-relaxed mb-3 text-sm text-gray-080">get actionable top-down research through the unique combination
+						of senior analyst, expert and automated algorithms</p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="p-4 md:w-1/4">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{% static 'img/fx7.jpg' %}" alt="blog">
+					<div class="p-6">
+						<h1 class="title-font text-base font-medium text-gray-900 mb-3 uppercase">Economic insight</h1>
+						<p class="leading-relaxed mb-3 text-sm text-gray-080">stay up to date with whats happening across the market using daily market.
+						backed by analyst, tested indicators that suits all types of trades.</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="p-4 md:w-1/4">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img class="lg:h-48 md:h-36 w-full object-cover object-center" src={% static 'img/fx6.jpeg' %} alt="blog">
+					<div class="p-6">
+						<h1 class="title-font text-base font-medium text-gray-900 mb-3 uppercase">daily market analysis</h1>
+						<p class="leading-relaxed mb-3 text-sm text-gray-080">use Powerful trading tools to monitor, anticipate and act on potensial marketing
+						move events</p>
+					</div>
+				</div>
+			</div>
+
+						<div class="p-4 md:w-1/4">
+				<div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+					<img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{% static 'img/fx2.jpg' %}" alt="blog">
+					<div class="p-6">
+						<h1 class="title-font text-base font-medium text-gray-900 mb-3 uppercase">featured ideas</h1>
+						<p class="leading-relaxed mb-3 text-sm text-gray-080">View bullish and bearish investments ideas based on both technical analysis 
+						all supported by tested strategy</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="text-gray-600 body-font bg-gray-300">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">$80M+</h2>
+        <p class="leading-relaxed uppercase">total assets</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">14</h2>
+        <p class="leading-relaxed uppercase">Years of experience</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">4,789,473+</h2>
+        <p class="leading-relaxed uppercase">registered investors</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">$7,867,894+</h2>
+        <p class="leading-relaxed uppercase">withdrawal each month</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Trading Plans</h1>
+    
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">BASIC</h2>
+          <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">$500</h1>
+          <p class="flex items-center font-black text-sm text-gray-900 mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>$500-$5,000
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>24/7 support
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-6">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Daily Status Report
+          </p>
+          <button class="flex items-center mt-auto text-white bg-gray-900 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded"> Get started
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          
+        </div>
+      </div>
+      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-lg border-2 border-indigo-900 flex flex-col relative overflow-hidden">
+          <span class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">Recommended</span>
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">GOLD</h2>
+          <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-500">
+            <span>$5,000</span>
+
+          </h1>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>$5,000-$20,000
+          </p>
+
+            <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>12.6% Daily Topup
+          </p>
+
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>24/7 support
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Daily Status Report
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-6">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Bonus:20%
+          </p>
+          <button class="flex items-center mt-auto text-white bg-indigo-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Get started
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          
+        </div>
+      </div>
+      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-lg border-2 border-gray-900 flex flex-col relative overflow-hidden">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">PLATNUM</h2>
+          <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-500">
+            <span>$25,000</span>
+            
+          </h1>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>$25,000-$99,999
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>14.9% Daily Topup
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900 mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>24/7 support
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Daily Status Report
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900 mb-6">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Bonus:30%
+          </p>
+          <button class="flex items-center mt-auto text-white bg-gray-900 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get started
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+      <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        <div class="h-full p-6 rounded-lg border-2 border-gray-800 flex flex-col relative overflow-hidden">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">VIP</h2>
+          <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-600">
+            <span>$100,000</span>
+          
+          </h1>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>$100,000-unlimited
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900 mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>15.8% Daily Topup
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>24/7 support
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-2">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Daily Status Report
+          </p>
+          <p class="flex items-center font-black text-sm text-gray-900  mb-6">
+            <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-900 text-white rounded-full flex-shrink-0">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Bonus:35%
+          </p>
+          <button class="flex items-center mt-auto text-white bg-gray-900 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Get started
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-gray-600 body-font bg-gray-300">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">why us</h2>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Best in CFDs</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-sm">We have extensive experience in the field of cryptocurrencies,Crypto/Forex trading and the stock market.
+Our knowledge helps us earn money for our clients. Here are our main features, what distinguishes us from our competitors.</p>
+    </div>
+    <div class="flex flex-wrap">
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-600 border-opacity-60">
+        <h2 class="text-base sm:text-lg text-gray-900 font-medium title-font mb-2 uppercase">24/7 support</h2>
+        <p class="leading-relaxed text-sm mb-4">We provide an unbeatable 24/7 customer support service to ensure your experience is smooth.</p>
+    
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-600 border-opacity-60">
+        <h2 class="text-base sm:text-lg text-gray-900 font-medium title-font mb-2 uppercase">Strong security</h2>
+        <p class="leading-relaxed text-sm mb-4">We implemented extra security to make sure your funds and data are not lost or stolen by hackers.</p>
+
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-600 border-opacity-60">
+        <h2 class="text-base sm:text-lg text-gray-900 font-medium title-font mb-2 uppercase">INSTANT WITHDRAW</h2>
+        <p class="leading-relaxed text-sm mb-4">Your funds are solely yours, you can withdraw at any time using a wide range of payment methods</p>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-600 border-opacity-60">
+        <h2 class="text-base sm:text-lg text-gray-900 font-medium title-font mb-2 uppercase">lucrative returns</h2>
+        <p class="leading-relaxed text-sm mb-4">We trade strategically and you share the returns. Your investments will always yield returns.</p>
+      </div>
+    </div>
+    </div>
+</section>
+{% for review in reviews %}
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+        <div class="h-full text-center">
+          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="{{review.imageURL}}">
+          <p class="leading-relaxed">{{review.text}}</p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{review.name}}</h2>
+          <p class="text-gray-500">{{review.title}}</p>
+        </div>
+      </div>
+      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+        <div class="h-full text-center">
+          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="{{review.imageURL}}">
+          <p class="leading-relaxed">{{review.text}}</p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{review.name}}</h2>
+          <p class="text-gray-500">{{review.title}}</p>
+        </div>
+      </div>
+      <div class="lg:w-1/3 lg:mb-0 p-4">
+        <div class="h-full text-center">
+          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="{{review.imageURL}}">
+          <p class="leading-relaxed">{{review.text}}</p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{review.name}}</h2>
+          <p class="text-gray-500">{{review.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="text-gray-600 body-font relativ bg-gray-300">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">feel free to send us your reviews</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        </div>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+          <a class="text-indigo-500">support@SFM.co.uk</a>
+          <p class="leading-normal my-5">Westfield industria park waunarlwydd,
+            <br>swamsea SA5 4SF
+          </p>
+          <span class="inline-flex">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+  {
+  "width": "100%",
+  "height": 400,
+  "currencies": [
+    "EUR",
+    "USD",
+    "JPY",
+    "GBP",
+    "CHF",
+    "AUD",
+    "CAD",
+    "NZD",
+    "CNY"
+  ],
+  "isTransparent": false,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+<footer class="text-gray-200 body-font bg-black">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+<div>
+  <p><span class="font-bold text-medium">Company Information:</span> This website (www.SFM.co.uk) is operated by FP Asset Management Cyprus Ltd, a Cyprus Investment Firm, authorized and 
+  regulated by the Cyprus 
+  Securities and Exchange Commission with CIF license number 317/17. FP Asset Management Cyprus Ltd is registered at Limassol, Cyprus.
+
+ 
+
+FP Asset Management Cyprus Ltd owns and operates the “s-financialmarkets” brand.
+
+ 
+
+<span class="font-bold text-medium">Risk Warning:</span> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 80.58% of retail investor 
+accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford
+ to take the high risk of losing your money. Past performance does not constitute a reliable indicator of future results. 
+ Future forecasts do not constitute a reliable indicator of future performance. Before deciding to trade, you should carefully 
+ consider your investment objectives, level of experience and risk tolerance. You should not deposit more than you are prepared to lose. 
+ Please ensure you fully understand the risk associated with the product envisaged and seek independent advice, if necessary. s-financialmarkets
+ does not issue advice, recommendations or opinions in relation to acquiring, holding or disposing of any financial product. FP Asset Management
+  Cyprus Ltd is not a financial adviser and all services are provided on an execution only basis. Please read our Risk Disclosure document.
+
+ 
+
+FP Asset Management Cyprus Ltd does not issue advice, recommendations or opinions in relation to acquiring, holding or disposing of any 
+financial product. FP Asset Management Cyprus Ltd is not a financial adviser and all services are provided on an execution only basis.</p></div>
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+    
+      <span class="ml-3 text-xl text-white">SFM.co.uk</span>
+    </a>
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 s-financialmarkets
+    </p>
+  </div>
+</footer>
+
+{% endblock content %}
