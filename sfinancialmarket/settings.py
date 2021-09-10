@@ -1,5 +1,5 @@
 
-
+import psycopg2
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'sfinancialmarket.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2-binary',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'sfmdb',
         'USER': 'sfmadmin',
         'PASSWORD': 'sFm@1234s',
