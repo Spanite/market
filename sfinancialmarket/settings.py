@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'sfinancialmarket.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2-binary',
         'NAME': 'sfmdb',
         'USER': 'sfmadmin',
         'PASSWORD': 'sFm@1234s',
@@ -132,7 +132,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = "media_root"
 
 
-LOGIN_URL = "/login"
+#LOGIN_URL = "/login"
 LOGOUT_REDIRECT_URL = "/"
 
 
