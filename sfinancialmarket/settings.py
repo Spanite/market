@@ -9,8 +9,6 @@ DEBUG = True
 SECRET_KEY = 'django-insecure-u%%g6hbze8x3yy+mk(30b%&=uowxj@kvpc99jc4^33k#l4w1n#'
 
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -74,11 +72,16 @@ WSGI_APPLICATION = 'sfinancialmarket.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': BASE_DIR / 'db.sqlite3',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sfmdb',
+        'USER': 'sfmadmin',
+        'PASSWORD': 'sFm@1234s',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 
@@ -162,7 +165,7 @@ if not DEBUG:
     SECURE_HSTS_PRELOAD = True
     X_FRAME_OPTIONS = "DENY"
 
-    ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ["178.62.50.245"]
 
 LOGGING = {
     'version': 1,
