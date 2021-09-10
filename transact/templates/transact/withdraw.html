@@ -13,9 +13,32 @@
     <form method="post" class="mt-2">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type='submit'   onclick="toggleModal('modal-example-small')" class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">
+    <div x-data="{ show: false }">
+    <div class="flex justify-center">
+    <button type='submit' @click={show=true}  class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md">
             Submit
-        </button>
+        </button>    
+        
+    </div>
+    <div x-show="show" tabindex="0" class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+        <div  @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 400px;">
+            <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
+                <button @click={show=false} class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                <div class="px-6 py-3 text-xl border-b font-bold capitalize">withdrawal request</div>
+                <div class="p-6 flex-grow justify-center object-center text-center">
+                <img class="inline object-center" src="https://img.icons8.com/ios/50/000000/cloud-checked.png"/>
+                    <p>your withdrawal request has been successfully subimitted </p>
+                </div>
+                <div class="px-6 py-3 border-t">
+                    <div class="flex justify-end">
+                        <button @click={show=false} type="button" class="bg-gray-700 text-gray-100 rounded px-4 py-2 mr-1">Close</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50"></div>
+    </div>
+</div>
         
     </form>
 </div>

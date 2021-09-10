@@ -1,6 +1,8 @@
 from django.db import models
 import uuid
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 # Create your models here.
@@ -21,7 +23,7 @@ CURRENCY =(
 
 
 class Client(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE, max_length=100)
+	user = models.OneToOneField(User, on_delete=models.CASCADE, max_length=100)
 	image = models.ImageField(blank=True, null=True, upload_to="media", default="img/no-image.png")
 	userid = models.CharField(blank=True, max_length=10)
 	bill = models.PositiveIntegerField(blank=True, null=True)
@@ -75,3 +77,12 @@ class Testimonials(models.Model):
 
 	def __str__(self):
 		return str(self.name)
+
+
+
+def post_user_created_signal(sender, instance, created, **kwargs):
+    if created:
+        Client.objects.create(user=instance)
+
+
+post_save.connect(post_user_created_signal, sender=User)

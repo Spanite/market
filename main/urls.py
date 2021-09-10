@@ -6,7 +6,7 @@ from .views import (
     Crypto,
     indecies,
     Forex,
-    Stock,Commodities,Tc,Ta,Tips,Lm,Fa,Wait,
+    Stock,Commodities,Tc,Ta,Tips,Lm,Fa,
     )
 
 app_name = "main"
@@ -26,6 +26,6 @@ urlpatterns = [
     path('tips/', Tips, name="tips"),
     path('ta/', Ta, name="ta"),
     path('tc/', Tc, name="tc"),
-    path('wait/', Wait, name="wait"),
+
     
 ]

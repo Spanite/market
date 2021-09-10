@@ -32,8 +32,7 @@ def reviews(request):
     context = {'test':test}
     return render(request, 'landing_page.html', context)
 
-def Wait(request):
-    return render(request, "main/wait.html")
+
 
 def Cfds(request):
     return render(request, "main/cfds.html")

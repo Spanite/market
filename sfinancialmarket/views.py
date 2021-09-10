@@ -92,3 +92,6 @@ def Reviews(request):
 	}
 
 	return render(request, "landing_page.html", context)	
+
+
+
