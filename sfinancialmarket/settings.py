@@ -23,7 +23,7 @@ INSTALLED_APPS = [
 
 	'crispy_forms',
 	"crispy_tailwind",
-	'tailwind',
+	
 	#'theme',
 	'django_countries',
 	'phonenumber_field',
